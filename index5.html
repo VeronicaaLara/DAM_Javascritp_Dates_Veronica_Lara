@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body onLoad="actualiza()">
+	<div id="capa0"> </div>
+	
+
+<script>
+
+	var reloj = 0;
+    var frecuencia = 1000;
+
+
+    function actualiza() {
+    var ahora = new Date();
+      
+    var fecha = ahora.getDate() + " - " + (ahora.getMonth() + 1) + " - " + ahora.getFullYear();
+    var hora = ahora.getHours() + ":" + ahora.getMinutes() + ":" + ahora.getSeconds();
+
+    var frase = "Hoy es" + fecha + "son las"  + hora;
+
+    var situa = document.getElementById('capa0');
+      situa.innerHTML = frase;
+    
+    reloj = setTimeout("actualiza()", frecuencia);
+    }
+	
+</script>
+</body>
+</html>

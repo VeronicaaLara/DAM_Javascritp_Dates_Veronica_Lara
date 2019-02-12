@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+<script>
+	var fecha = new Date();
+	var dia;
+	var semDia = fecha.getDay();
+
+	switch (semDia) {
+		case 0:
+			dia = "domingo";
+			break;
+		case 1;
+			dia = "lunes";
+			break;
+		case 2;
+			dia = "martes";
+			break;
+		case 3;
+			dia = "miercoles";
+			break;
+		case 4;
+			dia = "jueves";
+			break;
+		case 5;
+			dia = "viernes";
+			break;
+		case 6;
+			dia = "sábado";
+			break;
+		
+	}
+
+	var mes;
+
+	switch (fecha.getMonth() + 1){
+		case 1:
+                mes = "Enero";
+                break;
+            case 2:
+                mes = "Febrero";
+                break;
+            case 3:
+                mes = "Marzo";
+                break;
+            case 4:
+                mes = "Abril";
+                break;
+            case 5:
+                mes = "Mayo";
+                break;
+            case 6:
+                mes = "Junio";
+                break;
+            case 7:
+                mes = "Julio";
+                break;
+            case 8:
+                mes = "Agosto";
+                break;
+            case 9:
+                mes = "Septiembre";
+                break;
+            case 10:
+                mes = "Octubre";
+                break;
+            case 11:
+                mes = "Noviembre";
+                break;
+            case 12:
+                mes = "Diciembre";
+                break;
+
+	}
+
+	var diaMes = (fecha.getDate());
+	var ano = fecha.getFullYear();
+	var hora = fecha.getHours();
+	var min = date.getMinutes(); 
+
+	 if ((min >= 0) && (min < 10)){
+	 	min = "0" + min;
+
+	 }
+        document.write("hoy es" + dia + diaMes + "de" + mes + "de" + ano "y son las" + hora + min);
+
+</script>
+</body>
+</html>

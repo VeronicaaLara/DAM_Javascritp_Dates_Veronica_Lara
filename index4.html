@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+
+<script>
+	
+	var fecha = prompt ("introduce fecha completa (dia, mes, año)");
+	var dia = 30;
+	var pasos = 3;
+
+	fecha = fecha.split("/");
+
+	var fecha = new Date (fecha[2], fecha[1] -1, fecha[0]);
+
+	document.write (fecha);
+
+	for(var i = 0; i < pasos; i++){
+		fecha.setDate(fecha.getDate() + dia)
+
+			document.write("<br/>" + fecha);
+	}
+	console.log (fecha);
+
+
+
+
+</script>
+</body>
+</html>

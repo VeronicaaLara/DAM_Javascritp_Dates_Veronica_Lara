@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+<script>
+	
+	var mes = prompt ("escribe el mes");
+	var ano = prompt ("escribe el año");
+
+	mes = mes -1;
+
+	var fecha = new Date(ano, mes);
+	var semDia = fecha.getDay();
+
+	document.write(mes.toUpperCase() + ", " + ano + "<br>");
+
+	switch (mes) {
+		case 0:
+			meses = "enero";
+			break;
+		case 1:
+			meses = "febrero";
+			break;
+		case 2:
+			meses = "marzo";
+			break;
+		case 3:
+			meses = "abril";
+			break;
+		case 4:
+			meses = "mayo";
+			break;
+		case 5:
+			meses = "junio";
+			break;
+		case 6:
+			meses = "julio";
+			break;
+		case 7:
+			meses = "agosto";
+			break;
+		case 8:
+			meses = "septiembre";
+			break;
+		case 9:
+			meses = "octubre";
+			break;
+		case 10:
+			meses = "noviembre";
+			break;
+		case 11:
+			meses = "diciembre";
+			break;
+
+	document.write (meses + "de" + ano);
+
+	while (fecha.getMonth() == mes){
+
+		switch (fecha.getDate()){
+			  case 0:
+                    dia = "domingo";
+                    break;
+                case 1:
+                    dia = "lunes";
+                    break;
+                case 2:
+                    dia = "martes";
+                    break;
+                case 3:
+                    dia = "miércoles";
+                    break;
+                case 4:
+                    dia = "jueves";
+                    break;
+                case 5:
+                    dia = "viernes";
+                    break;
+                case 6:
+                    dia = "sábado";
+                    break;
+		}
+
+		document.write (fecha.getDate() + dia);
+
+		fecha.setDate(fecha.getDate() + 1);
+
+
+	}
+
+
+		
+
+
+
+
+</script>
+</body>
+</html>
